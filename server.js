@@ -3,7 +3,6 @@
 const express = require('express');
 const mysql = require('mysql2');
 const inquirer = require('inquirer');
-//const fs = require('fs');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -248,7 +247,6 @@ function updateEmployeeRole() {
 };
 
 const updateEmployeeManager = () => {
-  // Prompt user for employee and new manager details
   inquirer
     .prompt([
       {
@@ -275,9 +273,8 @@ const updateEmployeeManager = () => {
     });
 };
 
-// Function to view employees by manager
 const viewEmployeesByManager = () => {
-  // Prompt user for manager's ID
+
   inquirer
     .prompt({
       type: 'input',
@@ -302,9 +299,8 @@ const viewEmployeesByManager = () => {
     });
 };
 
-// Function to view employees by department
 const viewEmployeesByDepartment = () => {
-  // Prompt user for department's ID
+
   inquirer
     .prompt({
       type: 'input',
@@ -329,9 +325,7 @@ const viewEmployeesByDepartment = () => {
     });
 };
 
-// Function to view total utilized budget of a department
 const viewDepartmentBudget = () => {
-  // Prompt user for department's ID
   inquirer
     .prompt({
       type: 'input',
